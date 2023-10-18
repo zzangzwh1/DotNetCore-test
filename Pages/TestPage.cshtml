@@ -1,0 +1,86 @@
+﻿@page
+<!-- For POST-->
+<!-- -->
+@model DotNetCore_test.Pages.TestPageModel
+@{
+}
+<!DOCTYPE htmnl>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <title> TestPage</title>
+    <script type="text/javascript"></script>
+</head>
+<body>
+    <!-- HTML 5 structure Element header, nav, main, footer -->
+    <header>
+        <h1>Header Area! </h1>  <br /> <!-- line break-->
+        The Headings of Web Page document or area within <br />
+        <hr />
+
+    </header>
+    <nav>
+        <h2>Navigation Area</h2> <br />
+        <p> Section of Navigation Link</p> <br />
+        <hr />
+
+    </nav>
+
+    <main>
+        <h3> Main Content Area! </h3> <br />
+        <p> The Main Content of a Weg page Document, Only 1 per age</p>
+        <div>
+            <h5> Your Are in Div Tag!</h5>
+            <P> A generic Structural are on a webpage as a block display with empty space above and below</P>
+            <form name="TestPageForm" method="post"  >
+                <table border="1">
+                    <tr>
+                        <td>Field: </td>
+                        <td>
+                            <input type="text" name="Field" value="@Model.Field" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" colspan="2">
+                            <input type="submit" name="Submit" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
+            @Model.Message
+            <!--
+                HTTP Error 400
+                Missing antigoregery token(request verification tokens)
+                Security measure put in place by ASP.NET, enabled by default in Razor Pages
+                to Avoid Cross-Site request foregery(CSRF) attacks
+                token proves that request comes form a site which the form orignated from
+                (Cookie and form data)
+
+                use the namespace, Microsoft.AspNetCore.Mvc.Taghelpers to get token
+                top of file, add taghelper attribute below the page attribute 
+
+
+                place in _ViewImports.cshtml to make namespace available for all affected pages
+
+                will generated the antiforgery token in the HTML form (view source in browser)
+
+                addTageHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+            -->
+        </div>
+        <hr />
+
+
+
+    </main>
+
+    <footer>
+        <h5> Footer Area</h5> </br>
+        <p> The Footer Content of a Weg page or section of web page </p>
+    </footer>
+
+
+
+</body>
+</html>
