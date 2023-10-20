@@ -1,0 +1,119 @@
+﻿@page
+@model ControlSampleModel
+@{
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title> Contorl Sample</title>
+    <script type="text/javascript"></script>
+</head>
+<body>
+    <form name="ControlSampleForm" method="post" action="~/ViewHTTPRequest">
+        <table>
+            <tr>
+                <td>Text Box :</td>
+                <td> <input type="text" name="Text" /></td>
+
+            </tr>
+            <tr>
+                <td>checkbox</td>
+                <td>
+                    <input type="checkbox" name="CheckBoxItem1" value="1" /> Item 1 <br />
+                    <input type="checkbox" name="CheckBoxItem2" value="2" /> Item 2 <br />
+                    <input type="checkbox" name="CheckBoxItem2" value="3" /> Item 3 <br />
+                </td>
+
+            </tr>
+            <tr>
+                <td> Radio Button</td>
+                <td>
+                    <input type="radio" name="RadioButton" value="1">Item 1 <br />
+                    <input type="radio" name="RadioButton" value="2">Item 2 <br />
+                    <input type="radio" name="RadioButton" value="3">Item 3 <br />
+                </td>
+            </tr>
+            <tr>
+                <td>Hidden Field: </td>
+                <td> <input type="hidden" name="HiddenFeield" value="This is Hidden" /> </td>
+            </tr>
+            <tr>
+                <td> Password</td>
+                <td>
+                    <input type="password" name="PasswordBox" />
+                </td>
+            </tr>
+            <tr>
+                <td> Scrolling Texb Box: </td>
+                <td>
+                    <textarea name="TextArea" cols="20" rows="5"> </textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td> Select Element / Option Element Drop Down List :</td>
+                <td>
+                    <select name="SelectElementDropDownList" size="1">
+                        <option value="0">Make a selection</option>
+                        <option value="1"> option 1</option>
+                        <option value="2"> option 2</option>
+                        <option value="3"> option 3</option>
+
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td> Select Element / Option Element List : </td>
+                <td>
+                    <select name="SelectElementList" size="3">
+                        <option value="1">option 1</option>
+                        <option value="2">option 2</option>
+                        <option value="3">option 3</option>
+
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <!-- adjacent elements click on label -->
+                    <label> A Text Box Control Label : <input type="text" name="ATextBox" /></label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!-- Associated elements, Click on label -->
+                    <label for="_AnotherTextBox">Another Text Box Label:</label>
+                    <input type="text" name="AnotherTextBox" id="_AnotherTextBox" />
+
+                </td>
+            </tr>
+            <tr>
+                <td> Fieldset Element/Legend Element</td>
+                <td>
+                    <fieldset name="FieldSet">
+                        <legend> Legend</legend>
+                        <label>Group Item 1: <input type="text" name="GroupItem1" /></label> <br /><br />
+                        <label>Group Item 2: <input type="text" name="GroupItem2" /></label> <br /><br /> 
+                        <label>Group Item 3: <input type="text" name="GroupItem3" /></label> <br /><br />
+
+                    </fieldset>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="submit" name="Submit" value="Submit" />
+                </td>
+                <td>
+                    <input type="reset" name="Reset" />
+                </td>
+            </tr>
+        </table>
+
+    </form>
+
+</body>
+</html>

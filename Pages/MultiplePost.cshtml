@@ -1,0 +1,45 @@
+﻿@page
+@model DotNetCore_test.Pages.MultiplePostModel
+@{
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Multple Post </title>
+</head>
+<body>
+    <form name="MultiplePostForm" method="post" action="~/ViewHTTPRequest">
+
+        <table>
+            <tr>
+                <td> First Input Field : </td>
+                <td>
+                    <input type="text" name="FirstInputField" />
+                </td>
+            </tr>
+            <br />
+            <tr>
+                <td>
+                    <input type="submit" name="Submit" value="First" />
+                </td>
+            </tr>
+            <tr>
+                <td> Second Input Field : </td>
+                <td>
+                    <input type="text" name="SecondInputField" />
+                </td>
+            </tr>
+            <br />
+            <tr>
+                <td>
+                    <input type="submit" name="Submit" value="Second" />
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    @Model.Message
+
+</body>
+</html>

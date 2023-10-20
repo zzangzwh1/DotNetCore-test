@@ -1,0 +1,98 @@
+﻿@page
+@model DotNetCore_test.Pages.ControlSampleHTMLModel
+@{
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title> Control Sample HTML5</title>
+</head>
+<body>
+    <form name="ControlSampleHTML5Form" method="post" action="~/ViewHTTPRequest">
+        <tabel>
+            <tr>
+                <td>Email Address</td>
+                <td><input type="email" name="Email" /></td>
+
+            </tr>
+            <tr>
+                <td> URL: </td>
+                <td> <input type="url" name="URL" /></td>
+            </tr>
+            <tr>
+                <td> Telephone : </td>
+                <td> <input type="tel" name="TelephoneNumber" /></td>
+            </tr>
+            <br />
+            <tr>
+                <td> Search : </td>
+                <td> <input type="search" name="Search" /></td>
+            </tr>
+            <br />
+            <tr>
+                <td>Data List : </td>
+                <td>
+                    <input type="text" name="DataListEntry" list="DataList" />
+                    <datalist id="DataList">
+                        <option>Red</option>
+                        <option>Green</option>
+                        <option>Blue</option>
+                    </datalist>
+                </td>
+            </tr>
+            <br />
+            <tr>
+                <td> Slider: </td>
+                <td> Low(1)<input type="range" name="Slider" min="1" max="5" step="1" /> High(5)</td>
+            </tr>
+            <br />
+            <tr>
+                <td> Spinner: </td>
+                <td> <input type="number" name="Spinner" min="1" max="5" step="1" /></td>
+            </tr>
+            <br/>
+            <tr>
+                <td>Calendar (Date) : </td>
+                <td> <input type="date" name="Date" /></td>
+            </tr>
+            <br />
+            <tr>
+                <td>Calendar (Datetime) : </td>
+                <td> <input type="datetime" name="DateTime" /></td>
+            </tr>
+            <br />
+            <tr>
+                <td>Calendar (Datetime - local) : </td>
+                <td> <input type="datetime-local" name="DateTimeLocal" /></td>
+            </tr>
+            <br />
+            <tr>
+                <td>Calendar (Datetime - Time) : </td>
+                <td> <input type="time" name="Time" /></td>
+            </tr>
+            <br />
+            <tr>
+                <td>Calendar (Datetime - MONTH) : </td>
+                <td> <input type="month" name="Month" /></td>
+            </tr>
+            <br />
+            <tr>
+                <td>Calendar (Datetime - Weeks) : </td>
+                <td> <input type="week" name="Week" /></td>
+            </tr>
+            <br />
+            <tr>
+                <td>Color- Well : </td>
+                <td> <input type="color" name="ColorWell" /></td>
+            </tr>
+            <br />
+            <tr>
+                <td>
+                    <input type="submit" name="Submit" value="Submit" />
+                </td>
+            </tr>
+        </tabel>
+    </form>
+</body>
+</html>

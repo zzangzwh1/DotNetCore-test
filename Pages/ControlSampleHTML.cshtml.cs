@@ -1,0 +1,12 @@
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+
+namespace DotNetCore_test.Pages
+{
+    public class ControlSampleHTMLModel : PageModel
+    {
+        public void OnGet()
+        {
+        }
+    }
+}
