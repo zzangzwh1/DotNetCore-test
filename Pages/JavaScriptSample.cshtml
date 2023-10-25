@@ -1,0 +1,61 @@
+﻿@page
+@model DotNetCore_test.Pages.JavaScriptSampleModel
+@{
+}
+
+<!DocType html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JavaScript </title>
+
+    <script type="text/javascript">
+        function isNumeric(aValue)
+        {
+            
+            let length = aValue.length;
+            let index = 0;
+
+            let isValid = length > 0;
+
+            for (index = 0; (index <length) && isValid; index++){
+                let aCharacter = aValue.charAt(index);
+                if(aCharacter < '0' || aCharacter > '9')
+                {
+                    isValid = false;
+                }
+            }
+            return isValid;
+
+        }
+
+        function addOneToField(aField)
+        {
+            if(isNumeric(aField.value))
+            {
+                aField.value = parseInt(aField.value) + 1;
+            }
+            else{
+                alert('Field Value must be Numeric.');
+                aField.focus();
+                aField.select();
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <form name="SampleForm">
+        <p>
+            Click This
+            <!-- window.document.form['SampleForm'].elements['Field'] -->
+            <input type="button" value="Button" onclick="addOneToField(window.document.SampleForm.Field)" />
+
+            to incremnet this
+            <input type="text" name="Field" size="3" value="2" id="textValue" />
+        </p>
+    </form>
+
+</body>
+</html>

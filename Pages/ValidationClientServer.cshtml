@@ -1,0 +1,68 @@
+﻿@page
+@model DotNetCore_test.Pages.ValidationClientServerModel
+@{
+}
+
+<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> Validation Client Server</title>
+    <script type="text/javascript">
+        //validate - Client
+
+
+        function isFormValid(aForm) {
+            let isValid = false;
+            let aValue = aForm.InputField.value;
+
+            let length = aValue.length;
+            if (length > 0 && length <= 5) {
+                isValid = true;
+            }
+            else {
+                // alert or set form control value
+                alert('Input Field is Required and must contain up to 5 charater.');
+
+            }
+
+            // to by pass client side validation
+            // - return true
+            // - or
+            // - <form> set onsubmit = return true
+            //
+            return isValid;
+
+        }
+
+    </script>
+</head>
+
+
+
+<body>
+    <!--return isFormValid(window.document.SampleForm);--->
+    <form name="SampleForm" method="post" onsubmit="return true; ">
+        <table>
+            <tr>
+                <td>
+                    Input Field :
+                </td>
+                <td>
+                    <input type="text" name="InputField" value="@Model.InputField" />
+                    @Html.ValidationMessage("InputField") <!-- Tag Helper, view source in browser-->
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="Submit" value="Submit" />
+                </td>
+            </tr>
+        </table>
+
+    </form>
+    @Model.Message
+
+</body>
+
+</html>
