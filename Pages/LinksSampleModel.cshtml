@@ -1,0 +1,53 @@
+﻿@page
+@model DotNetCore_test.Pages.LinksSampleModelModel
+@{
+}
+<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Links Sample</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <!-- Anchor Element-->
+                <a href="https://dev1.baist.ca"> Absolute HyperLink </a>
+
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <a href="https://dev1.baist.ca" target="_blank">targeting hyperlink</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <a href="~/images/image1.jpg">relative hyperlink</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <!-- Image Element -->
+                <img src="~/images/image2.jpg" height="100" width="100" alt="mikeImage"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <!-- Image Link -->
+                <a href="https://dev1.baist.ca"><img src="~/images/image1.jpg" height="100" width="100" alt="MikeImages" /></a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <!-- Thumb nail images link-->
+                <a href="~/images/image2.jpg"> <img src="~/images/image2.jpg" height="20" width="20" /></a>
+            </td>
+        </tr>
+
+    </table>
+</body>
+</html>

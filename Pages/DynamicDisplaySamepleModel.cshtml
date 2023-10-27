@@ -1,0 +1,24 @@
+﻿@page
+@model DotNetCore_test.Pages.DynamicDisplaySamepleModelModel
+@{
+}
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Dynamic Display Sample</title>
+    </head>
+    <body>
+        <table>
+        @foreach(var sampleOjbect in Model.SampleObjectCollection)
+        {
+            <tr>
+                <td>
+                    @sampleOjbect.FirstProperty
+                </td>
+                <td>@sampleOjbect.SecondProperty</td>
+            </tr>
+        }
+        </table>
+    </body>
+</html>

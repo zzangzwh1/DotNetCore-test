@@ -7,4 +7,8 @@
     <RootNamespace>DotNetCore_test</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\libraries\" />
+  </ItemGroup>
+
 </Project>
