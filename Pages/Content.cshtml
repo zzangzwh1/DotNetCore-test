@@ -1,0 +1,48 @@
+﻿@page
+@model DotNetCore_test.Pages.ContentModel
+@{
+   // Layout = "_Layout";  // set the lay our here or we can set in _ViewStart
+
+    ViewData["Title"] = "**** Title from Content ****";
+}
+
+@section scriptContent
+{
+    <script type="text/javascript"> 
+        // *** script from content page ***
+
+    </script>
+}
+
+<table>
+    <tr>
+        <td>** Main Area from Content Page **</td>
+
+    </tr>
+    <tr>
+        <td>
+            <div>
+                <table>
+                    <tr>
+                        <td>
+                            **** Division **** Area from Content Page
+                       
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> *** <input type="text" name="InputField" /></td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>
+
+@section footerContent
+{
+    <table>
+        <tr>
+            <td>** Footer Area From Content Page **</td>
+        </tr>
+    </table>
+}

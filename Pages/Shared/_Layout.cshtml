@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <!--Address Bar / Browser Tab Favorites Icon - /wwwrooot/images -->
+    <link rel="icon" href="~/images/BAISTFavoritesIcon.ico" type="image/x-icon" />
+    <!-- /wwwroot/css-->
+    <link rel="stylesheet" href="~/css/SampleBlueStyle.css" />
+
+
+    <script type="text/javascript">
+        //script form Layout
+
+    </script>
+
+    @RenderSection("scriptContent",required:false)<!-- Render a section -->
+
+</head>
+<body>
+    <header>
+        Header Area from Layout <br />
+    </header>
+    <nav>
+        Nav Area from Layout    <br />
+    </nav>
+    <main>
+        Main Area from Layout <br />
+        @RenderBody()
+
+    </main>
+    <Footer>
+        Footer Area from Layout <br />
+
+        @if (IsSectionDefined("footerContent")) // another way to render a scection
+        {
+            @RenderSection("footerContent")
+        }
+
+
+    </Footer>
+</body>
+</html>
