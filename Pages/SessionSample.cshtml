@@ -1,0 +1,23 @@
+﻿@page
+@model DotNetCore_test.Pages.SessionSampleModel
+@{
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Session Sample</title>
+</head>
+<body>
+    <h1>Session Sample</h1>
+    <form name="SessionSampleForm" method="post">
+        <!-- Your form content goes here -->
+        <div>
+            <br />
+            <input type="submit" name="Submit" value="Submit" />
+        </div>
+    </form>
+
+    @Model.Message
+</body>
+</html>
